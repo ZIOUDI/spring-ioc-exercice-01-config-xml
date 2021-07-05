@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- TODO beans here -->
+	<bean id="formateurDao" class="fr.formation.spring.dao.FormateurDaoImpl"></bean>
+
+	<bean id="formateurService" class="fr.formation.spring.service.FormateurServiceImpl"
+	 c:formateurDao-ref="formateurDao">
+	</bean>
+	
+</beans>
